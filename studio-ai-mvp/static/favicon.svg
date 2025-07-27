@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#gradient)" />
+  
+  <!-- Magic wand -->
+  <path d="M20 20 L44 44 M42 42 L46 46 M40 46 L46 40" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Sparkles -->
+  <g fill="white">
+    <circle cx="25" cy="15" r="1.5" />
+    <circle cx="35" cy="12" r="1" />
+    <circle cx="45" cy="18" r="1.5" />
+    <circle cx="15" cy="25" r="1" />
+    <circle cx="12" cy="35" r="1.5" />
+    <circle cx="18" cy="45" r="1" />
+    <circle cx="50" cy="30" r="1" />
+    <circle cx="52" cy="40" r="1.5" />
+  </g>
+  
+  <!-- Star sparkle -->
+  <path d="M30 8 L31 11 L34 10 L32 13 L35 15 L31 15 L30 18 L29 15 L25 15 L28 13 L26 10 L29 11 Z" fill="white" opacity="0.8"/>
+</svg>

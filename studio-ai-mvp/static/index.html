@@ -3,43 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio AI - יצירת תמונות שיווקיות</title>
+    <title>Studio AI - יצירת תמונות שיווקיות פרימיום</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <div class="container">
-        <header>
-            <h1>Studio AI</h1>
-            <p>הופכים רעיון פשוט לתמונת 'וואו' לעסק שלך - בשניות.</p>
-        </header>
-
-        <main>
-            <div class="form-group">
-                <label for="product-input">מה המוצר או השירות?</label>
-                <input type="text" id="product-input" placeholder="לדוגמה: נעלי עור אלגנטיות, עוגת שוקולד עשירה">
+    <!-- Background Elements -->
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-magic"></i>
+                <span>Studio AI</span>
             </div>
-
-            <div class="form-group">
-                <label for="offer-input">מה נוסח המבצע או המסר?</label>
-                <input type="text" id="offer-input" placeholder="לדוגמה: 50% הנחה, קולקציה חדשה">
+            <div class="nav-links">
+                <span class="premium-badge">
+                    <i class="fas fa-crown"></i>
+                    PREMIUM
+                </span>
             </div>
+        </div>
+    </nav>
 
-            <button id="generate-btn">
-                <span class="btn-text">✨ צור תמונת 'וואו'</span>
-                <div class="spinner" style="display: none;"></div>
-            </button>
-        </main>
-
-        <section class="result-section">
-            <div id="image-placeholder" class="image-placeholder">
-                <p>התמונה שלך תופיע כאן...</p>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">יצירת תמונות שיווקיות</span>
+                    <br>
+                    <span class="secondary-text">ברמה פרימיום</span>
+                </h1>
+                <p class="hero-subtitle">
+                    הופכים רעיון פשוט לתמונה מקצועית שתמכור עבורכם - תוך שניות
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">תמונות נוצרו</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">שביעות רצון</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4K</span>
+                        <span class="stat-label">איכות מקסימלית</span>
+                    </div>
+                </div>
             </div>
-            <img id="result-image" src="" alt="התמונה שנוצרה" style="display: none;">
         </section>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>צור את התמונה המושלמת שלך</h2>
+                    <p>מלא את הפרטים והכן להתרשם מהתוצאות</p>
+                </div>
+
+                <form class="premium-form" id="generation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-input">
+                                <i class="fas fa-box"></i>
+                                מה המוצר או השירות?
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="text" 
+                                    id="product-input" 
+                                    placeholder="לדוגמה: נעלי עור אלגנטיות, עוגת שוקולד עשירה"
+                                    autocomplete="off"
+                                >
+                                <div class="input-border"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="offer-input">
+                                <i class="fas fa-percentage"></i>
+                                מה נוסח המבצע או המסר?
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="text" 
+                                    id="offer-input" 
+                                    placeholder="לדוגמה: 50% הנחה, קולקציה חדשה, מהדורה מוגבלת"
+                                    autocomplete="off"
+                                >
+                                <div class="input-border"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="generate-btn" class="premium-btn">
+                        <span class="btn-content">
+                            <i class="fas fa-sparkles"></i>
+                            <span class="btn-text">צור תמונת 'וואו' עכשיו</span>
+                        </span>
+                        <div class="btn-loader">
+                            <div class="loader-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="loader-text">יוצר תמונה מדהימה...</span>
+                        </div>
+                        <div class="btn-gradient"></div>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="results-container">
+                <div class="results-header">
+                    <h3>התוצאה שלך</h3>
+                    <p>תמונה מקצועית, מותאמת אישית</p>
+                </div>
+
+                <div class="image-result">
+                    <div id="image-placeholder" class="image-placeholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-image"></i>
+                            <p>התמונה המדהימה שלך תופיע כאן</p>
+                            <span class="placeholder-hint">מלא את הפרטים למעלה ולחץ "צור תמונה"</span>
+                        </div>
+                    </div>
+                    
+                    <div id="result-container" class="result-container" style="display: none;">
+                        <img id="result-image" src="" alt="התמונה שנוצרה">
+                        <div class="image-actions">
+                            <button class="action-btn download-btn">
+                                <i class="fas fa-download"></i>
+                                הורד תמונה
+                            </button>
+                            <button class="action-btn share-btn">
+                                <i class="fas fa-share-alt"></i>
+                                שתף
+                            </button>
+                            <button class="action-btn regenerate-btn">
+                                <i class="fas fa-redo"></i>
+                                צור שוב
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="features-container">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h4>בינה מלאכותית מתקדמת</h4>
+                    <p>טכנולוגיית FLUX.1 החדשנית</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>יצירה מהירה</h4>
+                    <p>תוצאות תוך שניות ספורות</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4>עיצוב מקצועי</h4>
+                    <p>איכות ברמת סטודיו עיצוב</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>התמונה נוצרה בהצלחה!</h3>
+            </div>
+            <p>התמונה המדהימה שלך מוכנה. בדוק את התוצאה למטה.</p>
+            <button class="modal-btn" onclick="closeModal()">נהדר!</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
